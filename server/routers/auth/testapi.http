@@ -1,0 +1,25 @@
+# đăng ký
+POST http://localhost:5005/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "username": "user1",
+    "password": "user",
+    "email": "user@user.com"
+}
+
+# đăng nhập
+###
+POST http://localhost:5005/api/v1/auth/login
+Content-Type: application/json
+ß
+{
+    "username": "user1",
+    "password": "user"
+}
+
+#renew token
+###
+GET http://localhost:5005/api/v1/auth/renew
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNmZTlkODU0ZWJlNGZhZmU2YTdmYmYiLCJ1c2VybmFtZSI6IlVTRVIxIiwiaWF0IjoxNjgxOTExODMzLCJleHAiOjE2ODI1MTY2MzN9.SoywL8Me9ipcXT3VYcNtQ-6DuTXl5RzHEtMfRGKdK6U
