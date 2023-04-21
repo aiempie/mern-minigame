@@ -8,9 +8,9 @@ function LoginForm() {
         <div className="signin-content">
           <div className="signin-image">
             <figure>
-              <img src="images/signin-image.jpg" alt="sing up image" />
+              <img src="images/signin-image.jpg" alt="Signin" />
             </figure>
-            <a href="#" className="signup-image-link">
+            <a href="/register" className="signup-image-link">
               Create an account
             </a>
           </div>

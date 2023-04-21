@@ -57,6 +57,7 @@ function RegisterForm() {
                   id="signup"
                   className="form-submit"
                   value="Register"
+                  onClick={alert("a")}
                 />
               </div>
             </form>
@@ -65,7 +66,7 @@ function RegisterForm() {
             <figure>
               <img src="images/signup-image.jpg" alt="sing up image" />
             </figure>
-            <a href="#" className="signup-image-link">
+            <a href="login" className="signup-image-link">
               I am already member
             </a>
           </div>
