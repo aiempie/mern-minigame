@@ -1,14 +1,28 @@
 import React from "react";
 import "./LoginForm.css";
+import { useState } from "react";
 
 function LoginForm() {
+  const [loginForm, setLoginForm] = useState({
+    user: "",
+    password: "",
+  });
+
+  const loginOnSubmit = async (event) => {
+    event.preventDefault();
+    console.log(loginForm);
+  };
+
+  const onChangeLoginForm = (event) => {
+    setLoginForm({ ...loginForm, [event.target.name]: event.target.value });
+  };
   return (
     <section className="sign-in">
       <div className="container">
         <div className="signin-content">
           <div className="signin-image">
             <figure>
-              <img src="images/signin-image.jpg" alt="Signin" />
+              <img src="images/signin-image.png" alt="Signin" />
             </figure>
             <a href="/register" className="signup-image-link">
               Create an account
@@ -16,18 +30,32 @@ function LoginForm() {
           </div>
           <div className="signin-form">
             <h2 className="form-title">Sign In</h2>
-            <form method="POST" className="register-form" id="login-form">
+            <form method="POST" className="register-form" id="login-form" onSubmit={loginOnSubmit}>
               <div className="form-group">
                 <label htmlFor="your_name">
                   <i className="zmdi zmdi-account material-icons-name" />
                 </label>
-                <input type="text" name="your_name" id="your_name" placeholder="Your Name" />
+                <input
+                  type="text"
+                  name="user"
+                  id="your_name"
+                  placeholder="Your Name"
+                  value={loginForm.user}
+                  onChange={onChangeLoginForm}
+                />
               </div>
               <div className="form-group">
                 <label htmlFor="your_pass">
                   <i className="zmdi zmdi-lock" />
                 </label>
-                <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
+                <input
+                  type="password"
+                  name="password"
+                  id="your_pass"
+                  placeholder="Password"
+                  value={loginForm.password}
+                  onChange={onChangeLoginForm}
+                />
               </div>
               <div className="form-group">
                 <input type="checkbox" name="remember-me" id="remember-me" className="agree-term" />

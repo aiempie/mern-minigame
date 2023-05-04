@@ -45,7 +45,7 @@ function RegisterForm() {
                     <span />
                   </span>
                   I agree all statements in{" "}
-                  <a href="#" className="term-service">
+                  <a href="/register" className="term-service">
                     Terms of service
                   </a>
                 </label>
@@ -57,14 +57,13 @@ function RegisterForm() {
                   id="signup"
                   className="form-submit"
                   value="Register"
-                  onClick={alert("a")}
                 />
               </div>
             </form>
           </div>
           <div className="signup-image">
             <figure>
-              <img src="images/signup-image.jpg" alt="sing up image" />
+              <img src="images/signup-image.jpg" alt="register" />
             </figure>
             <a href="login" className="signup-image-link">
               I am already member

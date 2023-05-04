@@ -1,11 +1,11 @@
 import "./App.css";
-import Login from "./pages/auth/Login";
+import AppRouter from "./AppRouter";
 
 function App() {
   return (
     <div className="App">
       <header></header>
-      <Login isRegister={false} />
+      <AppRouter />
     </div>
   );
 }
