@@ -1,10 +1,12 @@
 import React from "react";
 import "./LoginForm.css";
 import { useState } from "react";
+import logo from "../../assets/images/logo.jpg";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   const [loginForm, setLoginForm] = useState({
-    user: "",
+    username: "",
     password: "",
   });
 
@@ -18,85 +20,46 @@ function LoginForm() {
   };
   return (
     <section className="sign-in">
-      <div className="container">
-        <div className="signin-content">
-          <div className="signin-image">
-            <figure>
-              <img src="images/signin-image.png" alt="Signin" />
-            </figure>
-            <a href="/register" className="signup-image-link">
-              Create an account
-            </a>
+      <div className="bg-login">
+        <div className="form-content">
+          <div className="logo-login">
+            <img src={logo} alt="" />
           </div>
-          <div className="signin-form">
-            <h2 className="form-title">Sign In</h2>
-            <form method="POST" className="register-form" id="login-form" onSubmit={loginOnSubmit}>
-              <div className="form-group">
-                <label htmlFor="your_name">
-                  <i className="zmdi zmdi-account material-icons-name" />
-                </label>
-                <input
-                  type="text"
-                  name="user"
-                  id="your_name"
-                  placeholder="Your Name"
-                  value={loginForm.user}
-                  onChange={onChangeLoginForm}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="your_pass">
-                  <i className="zmdi zmdi-lock" />
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="your_pass"
-                  placeholder="Password"
-                  value={loginForm.password}
-                  onChange={onChangeLoginForm}
-                />
-              </div>
-              <div className="form-group">
-                <input type="checkbox" name="remember-me" id="remember-me" className="agree-term" />
-                <label htmlFor="remember-me" className="label-agree-term">
-                  <span>
-                    <span />
-                  </span>
-                  Remember me
-                </label>
-              </div>
-              <div className="form-group form-button">
-                <input
-                  type="submit"
-                  name="signin"
-                  id="signin"
-                  className="form-submit"
-                  value="Log In"
-                />
-              </div>
-            </form>
-            {/* <div className="social-login">
-              <span className="social-label">Or login with</span>
-              <ul className="socials">
-                <li>
-                  <a href="#">
-                    <i className="display-flex-center zmdi zmdi-facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="display-flex-center zmdi zmdi-twitter" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="display-flex-center zmdi zmdi-google" />
-                  </a>
-                </li>
-              </ul>
-            </div> */}
-          </div>
+          <h1 className="title">Đăng nhập</h1>
+          <form action="" onSubmit={loginOnSubmit}>
+            <div className="input-group input-dark mb-3">
+              <span className="input-group-text">
+                <i class="bi bi-person"></i>
+              </span>
+              <input
+                type="text"
+                className="form-control"
+                name="username"
+                id="username"
+                placeholder="Tài khoản"
+                onChange={onChangeLoginForm}
+              />
+            </div>
+            <div className="input-group input-dark mb-3">
+              <span className="input-group-text">
+                <i class="bi bi-lock"></i>
+              </span>
+              <input
+                type="password"
+                className="form-control"
+                name="password"
+                id="password"
+                placeholder="Mật khẩu"
+                onChange={onChangeLoginForm}
+              />
+            </div>
+            <button type="submit" className="btn btn-login">
+              Đăng nhập ngay
+            </button>
+            <Link to="/register" className="link-regiser">
+              Đăng ký ngay
+            </Link>
+          </form>
         </div>
       </div>
     </section>

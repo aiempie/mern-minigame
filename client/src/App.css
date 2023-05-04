@@ -5,16 +5,18 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   font-size: 1rem;
   line-height: 1.8;
-  color: #222;
+  color: #adb5bd;
   background: #f8f8f8;
   font-weight: 400;
   font-family: Poppins;
 }
+
 body {
-  font-family: "Crimson Text", serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1,
@@ -25,4 +27,23 @@ h3 {
 
 p {
   font-weight: 400;
+}
+
+.input-dark {
+  background-color: #0D0E0E;
+  border-radius: 4px;
+}
+
+.input-dark>input,
+.input-dark>span {
+  background-color: transparent;
+  border: none;
+}
+
+.input-dark>input:focus {
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
 }
