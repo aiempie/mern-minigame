@@ -12,7 +12,6 @@ function LoginForm() {
 
   const loginOnSubmit = async (event) => {
     event.preventDefault();
-    console.log(loginForm);
   };
 
   const onChangeLoginForm = (event) => {
