@@ -5,12 +5,10 @@ import Navbar from "./pages/navbar/Navbar";
 function App() {
   return (
     <div className="App" data-bs-theme="dark">
-      <div className="container">
-        <header>
-          <Navbar />
-        </header>
-        <AppRouter />
-      </div>
+      <header>
+        <Navbar />
+      </header>
+      <AppRouter />
     </div>
   );
 }

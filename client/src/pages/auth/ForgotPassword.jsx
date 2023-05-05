@@ -1,45 +1,32 @@
 import React, { useState } from "react";
-import "./RegisterForm.css";
 import logo from "../../assets/images/logo.jpg";
 import { Link } from "react-router-dom";
-function RegisterForm() {
-  const [registerForm, setRegisterForm] = useState({
+
+export default function ForgotPassword() {
+  const [forgotPasswordForm, setForgotPasswordForm] = useState({
     username: "",
     password: "",
   });
 
-  const registerOnSubmit = async (event) => {
+  const forgotPasswordOnSubmit = async (event) => {
     event.preventDefault();
-    console.log(registerForm);
+    console.log(forgotPasswordForm);
   };
 
-  const onChangeRegisterForm = (event) => {
-    setRegisterForm({
-      ...registerForm,
+  const onChangeForgotPasswordForm = (event) => {
+    setForgotPasswordForm({
+      ...forgotPasswordForm,
       [event.target.name]: event.target.value,
     });
   };
   return (
-    <section className="signup">
+    <div className="forgot-password">
       <div className="form-content">
-        <div className="logo-register">
+        <div className="logo-forgot-password">
           <img src={logo} alt="" />
         </div>
-        <h1 className="title">Đăng kí</h1>
-        <form action="" onSubmit={registerOnSubmit}>
-          <div className="input-group input-dark mb-3">
-            <span className="input-group-text">
-              <i class="bi bi-person"></i>
-            </span>
-            <input
-              type="text"
-              className="form-control"
-              name="username"
-              id="username"
-              placeholder="Tài khoản"
-              onChange={onChangeRegisterForm}
-            />
-          </div>
+        <h1 className="title">Quên mật khẩu</h1>
+        <form action="" onSubmit={forgotPasswordOnSubmit}>
           <div className="input-group input-dark mb-3">
             <span className="input-group-text">
               <i class="bi bi-envelope-at"></i>
@@ -50,7 +37,20 @@ function RegisterForm() {
               name="email"
               id="email"
               placeholder="Nhập email"
-              onChange={onChangeRegisterForm}
+              onChange={onChangeForgotPasswordForm}
+            />
+          </div>
+          <div className="input-group input-dark mb-3">
+            <span className="input-group-text">
+              <i class="bi bi-asterisk"></i>
+            </span>
+            <input
+              type="text"
+              className="form-control"
+              name="codeNumber"
+              id="codeNumber"
+              placeholder="Nhập code 5 chữ số"
+              onChange={onChangeForgotPasswordForm}
             />
           </div>
           <div className="input-group input-dark mb-3">
@@ -62,8 +62,8 @@ function RegisterForm() {
               className="form-control"
               name="password"
               id="password"
-              placeholder="Mật khẩu"
-              onChange={onChangeRegisterForm}
+              placeholder="Mật khẩu mới"
+              onChange={onChangeForgotPasswordForm}
             />
           </div>
           <div className="input-group input-dark mb-3">
@@ -76,19 +76,17 @@ function RegisterForm() {
               name="repassword"
               id="repassword"
               placeholder="Nhập lại mật khẩu"
-              onChange={onChangeRegisterForm}
+              onChange={onChangeForgotPasswordForm}
             />
           </div>
-          <button type="submit" className="btn btn-register">
-            Đăng ký ngay
+          <button type="submit" className="btn btn-forgotPassword">
+            Nhập
           </button>
           <Link to="/login" className="link-login">
             Đăng nhập
           </Link>
         </form>
       </div>
-    </section>
+    </div>
   );
 }
-
-export default RegisterForm;

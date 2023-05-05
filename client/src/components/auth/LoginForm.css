@@ -1,4 +1,6 @@
-.bg-login {
+.forgot-password,
+.signup,
+.sign-in {
   background-image: url('../../assets/images/loginBackground.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,11 +13,9 @@
   z-index: 1;
 }
 
-.sign-in .title {
-  margin: 1rem 0 2rem;
-}
-
-.bg-login::before {
+.forgot-password::before,
+.signup::before,
+.sign-in::before {
   position: absolute;
   content: '';
   width: 100%;
@@ -24,6 +24,13 @@
   opacity: .7;
   z-index: -1;
 }
+
+.forgot-password .title,
+.signup .title,
+.sign-in .title {
+  margin: 1rem 0 2rem;
+}
+
 
 .form-content {
   width: 50%;
@@ -35,6 +42,8 @@
   padding: 2rem;
 }
 
+.logo-forgot-password,
+.logo-register,
 .logo-login {
   padding: 2px;
   background-color: black;
@@ -43,6 +52,8 @@
   margin-top: -80px;
 }
 
+.logo-forgot-password img,
+.logo-register img,
 .logo-login img {
   width: 100px;
   height: 100px;
@@ -51,6 +62,8 @@
   border-radius: 100%;
 }
 
+.btn-forgotPassword,
+.btn-register,
 .btn-login {
   display: block;
   margin-top: 1rem;
@@ -62,16 +75,21 @@
   padding: 2px 30px;
 }
 
+.btn-forgotPassword:focus,
+.btn-register:focus,
 .btn-login:focus {
   box-shadow: none;
 }
 
+.btn-forgotPassword:hover,
+.btn-register:hover,
 .btn-login:hover {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.356);
   color: rgba(255, 255, 255, 0.356);
 }
 
+.link-login,
 .link-regiser {
   text-align: center;
   display: block;
@@ -80,6 +98,7 @@
   text-decoration: none !important;
 }
 
+.link-login:hover,
 .link-regiser:hover {
   color: #19a7ceb2;
 }
