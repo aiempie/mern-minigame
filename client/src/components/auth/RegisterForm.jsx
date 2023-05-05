@@ -29,7 +29,7 @@ function RegisterForm() {
         <form action="" onSubmit={registerOnSubmit}>
           <div className="input-group input-dark mb-3">
             <span className="input-group-text">
-              <i class="bi bi-person"></i>
+              <i className="bi bi-person"></i>
             </span>
             <input
               type="text"
@@ -42,7 +42,7 @@ function RegisterForm() {
           </div>
           <div className="input-group input-dark mb-3">
             <span className="input-group-text">
-              <i class="bi bi-envelope-at"></i>
+              <i className="bi bi-envelope-at"></i>
             </span>
             <input
               type="email"
@@ -55,7 +55,7 @@ function RegisterForm() {
           </div>
           <div className="input-group input-dark mb-3">
             <span className="input-group-text">
-              <i class="bi bi-lock"></i>
+              <i className="bi bi-lock"></i>
             </span>
             <input
               type="password"
@@ -68,7 +68,7 @@ function RegisterForm() {
           </div>
           <div className="input-group input-dark mb-3">
             <span className="input-group-text">
-              <i class="bi bi-lock"></i>
+              <i className="bi bi-lock"></i>
             </span>
             <input
               type="password"

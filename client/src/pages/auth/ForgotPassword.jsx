@@ -29,7 +29,7 @@ export default function ForgotPassword() {
         <form action="" onSubmit={forgotPasswordOnSubmit}>
           <div className="input-group input-dark mb-3">
             <span className="input-group-text">
-              <i class="bi bi-envelope-at"></i>
+              <i className="bi bi-envelope-at"></i>
             </span>
             <input
               type="email"
@@ -42,7 +42,7 @@ export default function ForgotPassword() {
           </div>
           <div className="input-group input-dark mb-3">
             <span className="input-group-text">
-              <i class="bi bi-asterisk"></i>
+              <i className="bi bi-asterisk"></i>
             </span>
             <input
               type="text"
@@ -55,7 +55,7 @@ export default function ForgotPassword() {
           </div>
           <div className="input-group input-dark mb-3">
             <span className="input-group-text">
-              <i class="bi bi-lock"></i>
+              <i className="bi bi-lock"></i>
             </span>
             <input
               type="password"
@@ -68,7 +68,7 @@ export default function ForgotPassword() {
           </div>
           <div className="input-group input-dark mb-3">
             <span className="input-group-text">
-              <i class="bi bi-lock"></i>
+              <i className="bi bi-lock"></i>
             </span>
             <input
               type="password"
