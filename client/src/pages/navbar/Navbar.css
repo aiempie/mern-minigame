@@ -1,4 +1,131 @@
 .navbar {
   position: fixed;
   z-index: 999;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.nav-logo {
+  width: 100px;
+  overflow: hidden;
+}
+
+.nav-logo img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.navbar-menu>a {
+  display: flex;
+  text-decoration: none;
+}
+
+.login-logup {
+  color: white;
+  font-size: 1.25rem;
+  align-items: center;
+}
+
+.login-logup i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+
+}
+
+.login-logup:hover {
+  opacity: .7;
+  color: white;
+}
+
+.navbar .btn-open-menu {
+  padding: 0;
+  line-height: 1rem;
+}
+
+.navbar .btn-open-menu:focus {
+  box-shadow: none;
+}
+
+.navbar .btn-open-menu:hover i {
+  opacity: .7;
+}
+
+.navbar .btn-open-menu i {
+  font-size: 2rem;
+  color: white;
+}
+
+.menu-content {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -25%;
+  background-color: #607D8B;
+  padding: 2rem;
+  width: 20%;
+  transition: all .3s ease-in;
+}
+
+.menu-content .offcanvas-header {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.menu-body {
+  margin-top: 1rem;
+}
+
+.menu-body .nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-body .nav-list .nav-items a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.menu-body .nav-list .nav-items:hover a {
+  opacity: .7;
+}
+
+.menu-content.show {
+  left: 0;
+}
+
+.btn-close {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-close:focus {
+  box-shadow: none;
+  border: none;
+  outline: none;
+  line-height: 1rem;
+}
+
+.btn-close:hover i {
+  opacity: .7;
+}
+
+.btn-close i {
+  font-size: 2rem;
+  color: white;
 }
