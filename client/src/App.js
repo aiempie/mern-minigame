@@ -1,19 +1,31 @@
 import "./App.css";
-import AppRouter from "./AppRouter";
-import Navbar from "./pages/navbar/Navbar";
-import { Provider } from "react-redux";
-import store from "./redux/store";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import Footer from "~/pages/footer/Footer";
+import { createTheme, ThemeProvider } from "@mui/material";
+import Navbar from "~/pages/navbar/Navbar";
+
+const theme = createTheme({
+  palette: {
+    mode: "dark", // đặt chế độ dark mode
+  },
+});
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App" data-bs-theme="dark">
-        <header>
+    <div className="App">
+      <ThemeProvider theme={theme}>
+        <header></header>
+        <main className="main">
           <Navbar />
-        </header>
-        <AppRouter />
-      </div>
-    </Provider>
+        </main>
+        <footer>
+          <Footer />
+        </footer>
+      </ThemeProvider>
+    </div>
   );
 }
 

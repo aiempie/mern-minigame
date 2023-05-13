@@ -1,66 +1,91 @@
 import React from "react";
 import "./LoginForm.css";
-import { useState } from "react";
-import logo from "../../assets/images/logo.jpg";
-import { Link } from "react-router-dom";
+import {
+  FormControl,
+  IconButton,
+  Input,
+  InputAdornment,
+  InputLabel,
+  TextField,
+} from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 function LoginForm() {
-  const [loginForm, setLoginForm] = useState({
-    username: "",
-    password: "",
-  });
+  const [showPassword, setShowPassword] = React.useState(false);
 
-  const loginOnSubmit = async (event) => {
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
 
-  const onChangeLoginForm = (event) => {
-    setLoginForm({ ...loginForm, [event.target.name]: event.target.value });
-  };
   return (
     <section className="sign-in">
-      <div className="form-content">
-        <div className="logo-login">
-          <img src={logo} alt="" />
-        </div>
-        <h1 className="title">Đăng nhập</h1>
-        <form action="" onSubmit={loginOnSubmit}>
-          <div className="input-group input-dark mb-3">
-            <span className="input-group-text">
-              <i className="bi bi-person"></i>
-            </span>
-            <input
-              type="text"
-              className="form-control"
-              name="username"
-              id="username"
-              placeholder="Tài khoản"
-              onChange={onChangeLoginForm}
-            />
-          </div>
-          <div className="input-group input-dark mb-3">
-            <span className="input-group-text">
-              <i className="bi bi-lock"></i>
-            </span>
-            <input
-              type="password"
-              className="form-control"
-              name="password"
-              id="password"
-              placeholder="Mật khẩu"
-              onChange={onChangeLoginForm}
-            />
-          </div>
-          <button type="submit" className="btn btn-login">
-            Đăng nhập ngay
+      <div className="box">
+        <div className="title">LOGIN</div>
+
+        <TextField
+          id="standard-size-normal"
+          label="Username"
+          variant="standard"
+          color="secondary"
+          fullWidth
+          sx={{ mt: 3 }}
+        />
+
+        <FormControl sx={{ mt: 3 }} variant="standard" fullWidth color="secondary">
+          <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+          <Input
+            id="standard-adornment-password"
+            type={showPassword ? "text" : "password"}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+
+        <div className="button login">
+          <button>
+            <span>GO</span> <i className="fa fa-check" />
           </button>
-          <Link to="/register" className="link-regiser">
-            Đăng ký ngay
-          </Link>
-          <Link to="/forgot-password" className="link-regiser">
-            Quên mật khẩu
-          </Link>
-        </form>
+        </div>
+        <a href className="pass-forgot">
+          Forgot your password?
+        </a>
+      </div>
+      <div className="overbox">
+        <div className="material-button alt-2">
+          <span className="shape" />
+        </div>
+        <div className="title">REGISTER</div>
+        <div className="input">
+          <label htmlFor="regname">Username</label>
+          <input type="text" name="regname" id="regname" />
+          <span className="spin" />
+        </div>
+        <div className="input">
+          <label htmlFor="regpass">Password</label>
+          <input type="password" name="regpass" id="regpass" />
+          <span className="spin" />
+        </div>
+        <div className="input">
+          <label htmlFor="reregpass">Repeat Password</label>
+          <input type="password" name="reregpass" id="reregpass" />
+          <span className="spin" />
+        </div>
+        <div className="button">
+          <button>
+            <span>NEXT</span>
+          </button>
+        </div>
       </div>
     </section>
   );

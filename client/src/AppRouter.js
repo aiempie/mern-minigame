@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/views/Home";
-import Login from "./pages/auth/Login";
-import ForgotPassword from "./pages/auth/ForgotPassword";
+import Home from "~/pages/views/Home";
+import Login from "~/pages/auth/Login";
+import ForgotPassword from "~/pages/auth/ForgotPassword";
 
 export default function AppRouter() {
   return (
