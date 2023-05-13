@@ -16,7 +16,7 @@
   float: left;
   padding: 60px 50px 40px 50px;
   width: 100%;
-  background: #333333d3;
+  background: #333333;
   border-radius: 10px;
   transform: scale(1);
   -webkit-transform: scale(1);
@@ -38,7 +38,7 @@
   border-radius: 10px;
   position: absolute;
   top: -10px;
-  background: rgba(255, 255, 255, 0.6);
+  background: #33333372;
   left: 0;
   transform: scale(0.95);
   -webkit-transform: scale(0.95);
