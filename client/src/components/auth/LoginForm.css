@@ -73,16 +73,6 @@
   background: #ed2553;
 }
 
-.material-button,
-.alt-2,
-.material-button .shape,
-.alt-2 .shape,
-.box {
-  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .button {
   width: 100%;
   float: left;
@@ -134,17 +124,17 @@
 }
 .button.login button {
   width: 100%;
-  line-height: 64px;
+  line-height: 40px;
   left: 0%;
   background-color: transparent;
-  border: 3px solid rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.1);
   font-weight: 900;
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.2);
 }
 .button button {
   width: 100%;
-  line-height: 64px;
+  line-height: 40px;
   left: 0%;
   background-color: transparent;
   border: 3px solid rgba(0, 0, 0, 0.1);
@@ -160,32 +150,9 @@
   color: #ed2553;
   border: none;
 }
-.button.login button.active {
-  border: 3px solid transparent;
-  color: #fff !important;
-}
-.button.login button.active span {
-  opacity: 0;
-  transform: scale(0);
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-}
-.button.login button.active i.fa {
-  opacity: 1;
-  transform: scale(1) rotate(0deg);
-  -webkit-transform: scale(1) rotate(0deg);
-  -ms-transform: scale(1) rotate(0deg);
-}
-.button.login button i.fa {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  line-height: 60px;
-  transform: scale(0) rotate(-45deg);
-  -webkit-transform: scale(0) rotate(-45deg);
-  -ms-transform: scale(0) rotate(-45deg);
+.button.login button:focus {
+  color: #ed2553;
+  border-color: #ed2553;
 }
 .button.login button:hover {
   color: #ed2553;
@@ -252,13 +219,9 @@
 
 .material-button,
 .alt-2 {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: #ed2553;
   position: absolute;
-  top: 40px;
-  right: -70px;
+  top: 25px;
+  right: -25px;
   cursor: pointer;
   z-index: 100;
   transform: translate(0%, 0%);
